@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <title>Paint App</title>
+  </head>
+
+  <body style="background-color:  #F2F2F2">  
+  <div id="elems" class="elems">
+      <button id ="download" style="font-size:18px">Download</button>
+      
+      <div id="pen-size" class="pen-size">
+          <label for="pen-size"><i class="fa fa-pencil"></i>Size</label>
+          <input type="range" name="pen-size" id="pen-size" value="3" step="1" min="3" max="10" onclick="penSizeChange(this.value)">
+      </div>
+
+      <div id="fvContainer" class="fvContainer">
+        <div id="favContainer" ><label for="favcolor">Select color</label>
+          <input type="color"  name="favcolor" id="favcolor" value="#ff0000" onchange="favColor(this)">
+        </div>
+      </div>
+
+      <div id="drawing-colors" class="drawing-colors">
+        <div id="drawing-colors_1" class="drawing-colors_1">
+          <div class="color-circle active" data-color="red" onclick="selectColor(this)"></div>
+          <div class="color-circle" data-color="blue" onclick="selectColor(this)"></div>
+          <div class="color-circle" data-color="yellow" onclick="selectColor(this)"></div>
+          <div class="color-circle" data-color="black"onclick="selectColor(this)"></div>
+          <div class="color-circle" data-color="white" onclick="selectColor(this)"></div>
+          <div class="color-circle" data-color="tomato" onclick="selectColor(this)"></div>
+
+        </div>
+      
+        <div id="drawing-colors_2" class="drawing-colors_2">
+          <div class="color-circle2" data-color="purple"onclick="selectColor(this)"></div>
+          <div class="color-circle2" data-color="navy"onclick="selectColor(this)"></div>
+          <div class="color-circle2" data-color="aqua" onclick="selectColor(this)"></div>
+          <div class="color-circle2" data-color="bisque"onclick="selectColor(this)"></div>
+          <div class="color-circle2" data-color="grey" onclick="selectColor(this)"></div>
+          <div class="color-circle2" data-color="brown" onclick="selectColor(this)"></div>   
+        </div>
+
+        <div id="drawing-colors_3" class="drawing-colors_3">
+          <div class="color-circle3" data-color="orange"onclick="selectColor(this)"></div>
+          <div class="color-circle3" data-color="lime"onclick="selectColor(this)"></div>
+          <div class="color-circle3" data-color="magenta" onclick="selectColor(this)"></div>
+          <div class="color-circle3" data-color="palevioletred"onclick="selectColor(this)"></div>
+          <div class="color-circle3" data-color="peru" onclick="selectColor(this)"></div>
+          <div class="color-circle3" data-color="turquoise" onclick="selectColor(this)"></div>
+        </div>
+      </div>
+      <div class="border">
+      </div>
+
+      <div class="type1">
+        <div class="sep1"> 
+
+          <input type="radio" name="radio-type" value="brush" checked>
+            <label for="pen-brush">
+              <i class="fa fa-paint-brush" style="font-size:35px"></i>
+            </label>
+
+          <input type="radio" name="radio-type" value="line">
+            <label for="slash1">
+              <i class="fa fa-slash"style="font-size:33px"></i>
+            </label>    
+        </div>
+
+      <div class="sep2"> 
+        <input type="radio" name="radio-type" value="square">
+          <label for="square1">
+            <i class="far fa-square"style="font-size:44px"></i>
+          </label> 
+        <input type="radio" name="radio-type" value="triangle">
+          <label for="pen-pencil">
+            <span style='font-size:57px;'>&#9651;</span>
+          </label>        
+      </div>
+
+      <div class="sep3"> 
+        <input type="radio" name="radio-type" value="eraser">
+          <label for="eraser">
+            <i class="fa-solid fa-eraser"style="font-size:42px"></i>
+          </label> 
+          <input type="radio" name="radio-type" value="star">
+          <label for="star">
+            <i class="far fa-star"style="font-size:40px"></i>
+          </label> 
+      </div>
+    </div>
+    
+    <div class="border2"></div>
+    </div>
+    <script src="main.js"></script>
+    <script src="js/p5.js"></script>
+    <script src="objects/line.js"></script>
+    <script src="objects/triangle.js"></script>
+    <script src="objects/circle.js"></script>
+    <script src="objects/square.js"></script>
+    <script src="objects/star.js"></script>
+    <script src="operations/complex.js"></script>
+    <script src="operations/erase.js"></script>
+    <script src="operations/move.js"></script>
+    <script src="pictures/eraser.png"></script>
+  </body>
+</html>
